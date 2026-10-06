@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Demir Software</title>
+    <meta name="description" content="Demir Software is an independent software development studio specializing in custom mobile applications, web solutions, and digital products.">
+    <meta name="keywords" content="Demir Software, software development studio, custom mobile apps, iOS development, Android development, digital agency, Istanbul software, indie app developer">
+    <meta name="author" content="Muhammed Furkan Demir">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Demir Software">
+    <meta property="og:description" content="Independent software development studio building custom mobile and web applications.">
+    <meta property="og:site_name" content="Demir Software">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #151313;
+            --white: #FFFFFF;
+            --gray: #969696;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--ink);
+            color: var(--white);
+            font-family: 'IBM Plex Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+        .wood-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.04; 
+        }
+
+        main {
+            text-align: center;
+            z-index: 1; 
+        }
+
+        h1 {
+            color: var(--white);
+            font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        a {
+            color: var(--gray);
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        a:hover, a:focus, a:active {
+            color: var(--gray);
+            text-decoration: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <svg class="wood-texture" xmlns="http://www.w3.org/2000/svg">
+        <filter id="wood">
+            <feTurbulence type="fractalNoise" baseFrequency="0.005 0.1" numOctaves="4" stitchTiles="stitch"/>
+            <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                1 0 0 0 0
+                1 0 0 0 0
+                0 0 0 1 0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#wood)" fill="none"/>
+    </svg>
+
+    <main>
+        <h1>Demir Software</h1>
+        <a href="mailto:contact@demir.software">contact@demir.software</a>
+    </main>
+
+</body>
+</html>
