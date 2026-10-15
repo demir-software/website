@@ -144,8 +144,6 @@ class DedSecInterface {
     this.viewport = document.querySelector("#viewport");
     this.identityTrigger = document.querySelector("#identity-trigger");
     this.identityText = document.querySelector("#identity-text");
-    this.emblem = document.querySelector("#emblem");
-    this.emblemAscii = document.querySelector("#emblem-ascii");
     this.contactLink = document.querySelector("#contact-link");
     this.contactText = document.querySelector("#contact-text");
     this.copyStatus = document.querySelector("#copy-status");
@@ -234,9 +232,7 @@ class DedSecInterface {
     clearTimeout(this.morphTimer);
     this.identityIndex = (this.identityIndex + 1) % IDENTITIES.length;
     this.heavyBurst();
-    this.emblemAscii.innerHTML = "/▓\\<br>[@]<br>#%";
     await this.identityScrambler.to(IDENTITIES[this.identityIndex], { duration: 350 });
-    this.emblemAscii.innerHTML = "/_\\<br>[#]<br>@%";
     this.setAccessibleIdentity();
     this.identityBusy = false;
     this.scheduleMorph(fromInteraction ? 5600 : undefined);
